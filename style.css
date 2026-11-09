@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'montserrat-light';
+  font-weight: normal;
+  font-style: normal;
+  src: url('stuff/fonts/montserrat/otf/Montserrat-Light.otf') format('otf'),
+         url('stuff/fonts/montserrat/webfonts/Montserrat-Light.woff') format('woff'),
+         url('stuff/fonts/montserrat/webfonts/Montserrat-Light.woff2') format('woff2'),
+         url('stuff/fonts/montserrat/variable/Montserrat[wght].ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'montserrat-black';
+  font-weight: normal;
+  font-style: normal;
+  src: url('stuff/fonts/montserrat/otf/Montserrat-Black.otf') format('otf'),
+         url('stuff/fonts/montserrat/webfonts/Montserrat-black.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: 'montserrat';
+  font-weight: normal;
+  font-style: normal;
+  src: url('stuff/fonts/montserrat/otf/Montserrat-Regular.otf') format('otf'),
+         url('stuff/fonts/montserrat/webfonts/Montserrat-Regular.woff2') format('woff'),
+         url('stuff/fonts/montserrat/ttf/Montserrat-Regular.ttf') format('ttf');
+}
+
+
+/* KAJSLDJLKSAJKDJASLJDKASJDLSJKDJKS 
+/* IGNORE, MAY SPACE TALAGA RITO */
+
+.carousel {
+  display: flex;
+  margin: 75px auto;
+  margin-top: 10px !important;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.carousel .group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 20s linear infinite;
+}
+
+.carousel:hover{
+    animation-play-state: paused;
+}
+
+.carousel .group .card{
+    flex: 0 0 auto;
+    width: 50em;
+    height: 70em;
+    background: transparent;
+    align-content: center;
+    text-align: center;
+}
+
+.carousel .group .card img{
+    mask-image: linear-gradient(to bottom, black 60%, transparent);
+}
+
+
+@keyframes spin{
+    from{
+        translate: 0%;
+    }
+    to{
+        translate: -100%;
+    }
+}
+
+#benjamin{
+    background-color: transparent;
+    box-shadow: 0px 0px 10px 5px #96d7ff;
+    border-radius: 1em;
+    text-align: center;
+}
+
+#benjamin span{
+    font-family: 'montserrat-light';
+    color: #30638E;
+}
+
+#benjamin:hover{
+    box-shadow: 0px 0px 10px 5px #f46cc7;
+    transition: 0.5s all ease;
+}
+
+#benjamin span:hover{
+    color: #f46cc7;
+    text-shadow: 0px 0px 5px black;
+    transition: 0.5s all ease;
+}
