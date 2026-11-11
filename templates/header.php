@@ -33,12 +33,15 @@
 
         #nav-mobile li a{
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: #e52c44;
+            color: #ea8130;
         }
 
         #nav-mobile li a:hover{
-            color: #ea8130;
+            color: #f6ec5f;
             text-decoration: none;
+            font-weight: bold;
+            transition: 0.5s all ease;
+            text-shadow: 0 0 5px 3px black;
         }
 
         .material-icons{

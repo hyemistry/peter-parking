@@ -8,8 +8,8 @@
 
 <style>
     hr{
-        border: 1px solid #30638E;
-        width: 100em;
+        border: 1px solid #268ad6;
+        width: 80em;
         margin-top: 5em !important;
         margin: 3em auto;
     }
@@ -20,17 +20,20 @@
 
     #benjamin{
         background-color: #268ad6;
-        border-radius: 1em;
+        border-radius: 5em;
         text-align: center;
+        width: 13em;
+        height: 4em;
     }
 
     #benjamin span{
         font-family: 'montserrat-light';
+        font-size: 1.5em;
         color: white;
     }
 
     #benjamin:hover{
-        box-shadow: 0px 0px 10px 5px #ea8130;
+        box-shadow: 0px 0px 10px 3px #ea8130;
         transition: 0.5s all ease;
     }
 
@@ -42,6 +45,12 @@
         font-size: 2vh;
     }
 
+    #benimaru #col1{
+        position: relative;
+        border-right: 1px solid #268ad6;
+        height: 25vh;
+    }
+
 </style>
 
 <hr>
@@ -51,18 +60,18 @@
 
     <div id="benimaru" class="container">
         <div class="row">
-            <div class="col s4">
+            <div class="col s4" id="col1">
                 <h6>Fast Compliance</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem esse autem non aspernatur voluptates possimus tempora quo similique quam! Vel aliquam reprehenderit ducimus mollitia ab quia non quam corporis officia!</p>
             </div>
 
-            <div class="col s4">
-                <h6>Great Parking Spots</h6>
+            <div class="col s4" id="col1">
+                <h6>Open 24/7</h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam voluptatibus eum ipsum ipsa ut minus fuga est hic, doloribus dolorem quaerat aperiam vitae quae autem nihil sequi eius? Provident, consectetur.</p>
             </div>
 
             <div class="col s4">
-                <h6>Open 24/7</h6>
+                <h6>Great Parking Spots</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat atque saepe, ad expedita error nulla nemo ipsa quos beatae incidunt eaque rerum suscipit consequuntur, eum porro nisi doloremque fugiat est?</p>
             </div>
 
@@ -72,6 +81,6 @@
 
 <div class="center-align" style="margin: 20px;">
     <button id="benjamin" class="btn">
-        <span>Park Now</span>
+        <a href="parking.php"><span>Park Now</span></a>
     </button>
 </div>

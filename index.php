@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     
     <div id="sheesh" style="font-family: 'montserrat-light';" class="center-align">
         <h5 class="center-align" style="margin: 0 auto;">Welcome to</h5>
