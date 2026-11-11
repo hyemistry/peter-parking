@@ -11,7 +11,7 @@
     <?php include('templates/header.php'); ?>
 
 <!-- GO AHEAD BOSS DO WHATEVER U WANT -->
-
+<!--bruh-->
 
     <section id="lightningmcqueen" style="padding-top: 4em;">
         <div class="carousel">
