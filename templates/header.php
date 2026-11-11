@@ -15,30 +15,29 @@
             background-image: linear-gradient(to bottom, #b9dbf0, white, #b9dbf0);
         }
 
-        #title{
-            font-family: 'montserrat-light';
-            color: #D1495B;
+        nav a img{
+            width: 15%;
+            margin-bottom: 0.5em;
         }
 
-        #title:hover{
-            color: #EDAE49;
-            text-shadow: 0px 0px 3px #342c1e;
-            text-decoration: none;
-            transition: all 0.3s ease;
+        nav a img:focus:not(:focus-visible){
+            outline-color: transparent;
         }
 
         nav{
-            background-image: linear-gradient(to bottom, #b9dbf0, white, white);
+            position: fixed;
+            top: 0;
+            z-index: 9999;
             /* BOSS DAPAT TRANSPARENT TO, IDUNNO WHY IT WONT WORK SO YAB NA MUNA */
         }
 
         #nav-mobile li a{
-            font-family: 'montserrat-light';
-            color: #D1495B;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #e52c44;
         }
 
         #nav-mobile li a:hover{
-            color: #EDAE49;
+            color: #ea8130;
             text-decoration: none;
         }
 
@@ -51,14 +50,19 @@
             background-image: linear-gradient(to bottom, #b9dbf0, white, #b9dbf0);
         }
 
+        #hotdog:hover{
+            box-shadow: 0px 0px 5px 3px #ea8130;
+            transition: 0.5s all ease;
+        }
+
     </style>
 </head>
 <body>
 
 <header>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" id="title" class="brand-logo brand-text" style="font-size: 25px; margin: 0; padding-left: 25px; padding-right: 25px;">Peter's Parking Lot</a>
+    <nav class="white">
+        <div class="container">
+            <a href="index.php"><img src="stuff/photos/logo.png" alt="ParkUp"></a>
 
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
                     <i class="material-icons">menu</i>
@@ -67,12 +71,17 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
+                    <button id="hotdog" class="btn" style="
+                    background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
+                        <li><a href="parking.php" style="color: white; font-family: 'montserrat-light';">Park Now!</a></li>
+                    </button>
                 </ul>
             </div>
             
         <ul class="sidenav" id="mobile-links">
             <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About</a></li>
+            <li><a href="parking.php">Park Now</a></li>
         </ul>
     </nav>
 </header>

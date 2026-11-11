@@ -32,9 +32,10 @@
 .carousel {
   display: flex;
   margin: 75px auto;
-  margin-top: 10px !important;
-  width: 100%;
+  margin-top: 10em !important;
+  width: 110%;
   overflow-x: auto;
+  position: absolute;
 }
 
 .carousel::-webkit-scrollbar{
@@ -73,27 +74,4 @@
     to{
         translate: -100%;
     }
-}
-
-#benjamin{
-    background-color: transparent;
-    box-shadow: 0px 0px 10px 5px #96d7ff;
-    border-radius: 1em;
-    text-align: center;
-}
-
-#benjamin span{
-    font-family: 'montserrat-light';
-    color: #30638E;
-}
-
-#benjamin:hover{
-    box-shadow: 0px 0px 10px 5px #f46cc7;
-    transition: 0.5s all ease;
-}
-
-#benjamin span:hover{
-    color: #f46cc7;
-    text-shadow: 0px 0px 5px black;
-    transition: 0.5s all ease;
 }

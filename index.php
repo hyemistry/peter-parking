@@ -3,13 +3,17 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="materialize/css/materialize.min.css">
 <link rel="stylesheet" href="style.css">
-    
+
     <?php include('templates/header.php'); ?>
 
 <!-- GO AHEAD BOSS DO WHATEVER U WANT -->
 
-    <section id="lightningmcqueen">
+
+    <section id="lightningmcqueen" style="padding-top: 4em;">
         <div class="carousel">
             <div class="group">
                 <div class="card">
@@ -47,11 +51,11 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <div id="sheesh" style="font-family: 'montserrat-light'; ">
+    </div>
+    
+    <div id="sheesh" style="font-family: 'montserrat-light';" class="center-align">
         <h5 class="center-align" style="margin: 0 auto;">Welcome to</h5>
-        <h1 class="center-align" style="margin: 0 auto; font-color: #ace7f0; text-shadow: 0 0 3px #65c2d0;">Peter's Parking Lot</h1>
+        <img style="width: 25%;" src="stuff/photos/logo.png" alt="ParkUp">
         <h6 class="center-align" style="margin: 0 auto; padding-top: 10px;">The best parking solution in the city!</h6>
     </div>
 
