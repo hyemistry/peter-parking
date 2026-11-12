@@ -32,7 +32,7 @@
 .carousel {
   display: flex;
   margin: 75px auto;
-  margin-top: 10em !important;
+  margin-top: 10em;
   width: 110%;
   overflow-x: auto;
   position: absolute;
@@ -74,4 +74,9 @@
     to{
         translate: -100%;
     }
+}
+
+#lightningmcqueen {
+    margin-bottom: 3em;
+    width: 15%;
 }

@@ -10,9 +10,12 @@
 
 <head>
 <?php include('templates/header.php'); ?>
-<body>
 
-    <!-- dito yung parking lot stuff -->
+</head>
+<body>
+    
+    <h4>bruh i cant type shi</h4>
+
     
 </body>
 </html>

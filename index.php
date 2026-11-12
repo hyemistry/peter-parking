@@ -14,7 +14,7 @@
 <!--bruh-->
 
     <section id="lightningmcqueen" style="padding-top: 4em;">
-        <div class="carousel">
+        <!-- <div class="carousel">
             <div class="group">
                 <div class="card">
                     <img src="stuff/photos/car1.jpg" alt="Parking Lot" style="width: 100%; object-fit: cover;">
@@ -50,7 +50,7 @@
                     <img src="stuff/photos/bgc.jpg" alt="Bonifacio Global City" style="width: 100%; object-fit: cover;">
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
     
     <div id="sheesh" style="font-family: 'montserrat-light';" class="center-align">
