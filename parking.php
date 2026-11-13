@@ -9,10 +9,11 @@
 <!-- GO AHEAD BOSS DO WHATEVER U WANT -->
 <!--bruh-->
 
-   <section id="lightningmcqueen" style="padding-top: 4em;">
-      <div><h4>halloooo</h4></div>
-   </section>
-    
 
+<div class="container" style="padding-top: 5em;">
+   <h4>imma let u do ur part here muna boss then imma try figuring out the parking spot thingy</h4>
+</div>
+    
+<?php include('templates/footer.php'); ?>
 
 <html>

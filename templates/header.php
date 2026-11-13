@@ -28,7 +28,6 @@
             position: fixed;
             top: 0;
             z-index: 9999;
-            /* BOSS DAPAT TRANSPARENT TO, IDUNNO WHY IT WONT WORK SO YAB NA MUNA */
         }
 
         #nav-mobile li a{
@@ -37,11 +36,11 @@
         }
 
         #nav-mobile li a:hover{
-            color: #f6ec5f;
+            color: #aba43d;
             text-decoration: none;
             font-weight: bold;
+            text-shadow: 0px 0px 5px 3px black;
             transition: 0.5s all ease;
-            text-shadow: 0 0 5px 3px black;
         }
 
         .material-icons{
@@ -72,19 +71,19 @@
                 </a>
 
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
+                    <li><a href="contactus.php">Contact Us</a></li>
                     <button id="hotdog" class="btn" style="
                     background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
-                        <li><a href="parking.php" style="color: white; font-family: 'montserrat-light';">Park Now!</a></li>
+                        <li><a href="parking.php" style="color: white; font-family: 'montserrat-light';">Reservation</a></li>
                     </button>
                 </ul>
             </div>
             
         <ul class="sidenav" id="mobile-links">
-            <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About</a></li>
-            <li><a href="parking.php">Park Now</a></li>
+            <li><a href="contactus.php">Contact Us</a></li>
+            <li><a href="parking.php">Reservation</a></li>
         </ul>
     </nav>
 </header>

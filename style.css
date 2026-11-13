@@ -33,6 +33,15 @@ body{
     background-image: linear-gradient(to bottom, #b9dbf0, white, #b9dbf0);
 }
 
+body::selection{
+    background-color: #ea8130;
+    color: white;
+}
+
+#lightningmcqueen{
+    background-image: linear-gradient(to bottom, #b9dbf0, white, #b9dbf0);
+}
+
 .carousel {
   display: flex;
   margin: 75px auto;
@@ -78,4 +87,39 @@ body{
     to{
         translate: -100%;
     }
+}
+@font-face {
+  font-family: 'montserrat-light';
+  font-weight: normal;
+  font-style: normal;
+  src: url('stuff/fonts/montserrat/otf/Montserrat-Light.otf') format('otf'),
+         url('stuff/fonts/montserrat/webfonts/Montserrat-Light.woff') format('woff'),
+         url('stuff/fonts/montserrat/webfonts/Montserrat-Light.woff2') format('woff2'),
+         url('stuff/fonts/montserrat/variable/Montserrat[wght].ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'montserrat-black';
+  font-weight: normal;
+  font-style: normal;
+  src: url('stuff/fonts/montserrat/otf/Montserrat-Black.otf') format('otf'),
+         url('stuff/fonts/montserrat/webfonts/Montserrat-black.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: 'montserrat';
+  font-weight: normal;
+  font-style: normal;
+  src: url('stuff/fonts/montserrat/otf/Montserrat-Regular.otf') format('otf'),
+         url('stuff/fonts/montserrat/webfonts/Montserrat-Regular.woff2') format('woff'),
+         url('stuff/fonts/montserrat/ttf/Montserrat-Regular.ttf') format('ttf');
+}
+
+
+/* KAJSLDJLKSAJKDJASLJDKASJDLSJKDJKS 
+/* IGNORE, MAY SPACE TALAGA RITO */
+
+#lightningmcqueen {
+    margin-bottom: 3em;
+    width: 15%;
 }

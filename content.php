@@ -26,6 +26,10 @@
         height: 4em;
     }
 
+    #benjamin a{
+        text-decoration: none;
+    }
+
     #benjamin span{
         font-family: 'montserrat-light';
         font-size: 1.5em;
@@ -34,11 +38,13 @@
 
     #benjamin:hover{
         box-shadow: 0px 0px 10px 3px #ea8130;
+        transform: scale(1.1);
+        font-weight: bold;
         transition: 0.5s all ease;
     }
 
     #benimaru h6{
-        font-weight: bold;
+        font-weight: bolder;
     }
 
     #benimaru p{
@@ -51,17 +57,52 @@
         height: 25vh;
     }
 
+    .parallax-container {
+        height: 80vh;
+        margin-top: 5em;
+    }
+
+    .parallax {
+        position: absolute;
+    }
+
+    .parallax img {
+        display: block;
+    }
+
+
+    #shuna h4, h6, p{
+        font-weight: bold;
+    }
+
+    #shuna h6{
+        text-align: center;
+    }
+
+    #shuna{
+        margin-top: 3em;
+        margin-bottom: 3em;
+        font-family: 'montserrat-light';
+        font-size: 1em !important;
+    }
+
+    #shuna #fahh{
+        border-radius: 1em;
+        background-color: white;
+        box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+}
+
 </style>
 
-<hr>
 
-<div id="towmater" class="center-align">
-    <h5 class="black-text">Here, we offer:</h3>
+
+<div id="towmater" class="center-align" style="margin-top: 6em;">
+    <h5 class="black-text" style="margin-bottom: 1em;">Here, we offer:</h3>
 
     <div id="benimaru" class="container">
         <div class="row">
             <div class="col s4" id="col1">
-                <h6>Fast Compliance</h6>
+                <h6>Swift Compliance</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem esse autem non aspernatur voluptates possimus tempora quo similique quam! Vel aliquam reprehenderit ducimus mollitia ab quia non quam corporis officia!</p>
             </div>
 
@@ -84,3 +125,61 @@
         <a href="parking.php"><span>Park Now</span></a>
     </button>
 </div>
+
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="stuff/photos/parkingaest3.jpg" alt="" class="responsive-img">
+    </div>
+</div>
+
+<section id="shuna">
+    <div class="container center-align" style="margin-bottom: 3em;">
+        <h4>Reviews</h4>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s4 offset-l1" id="fahh">
+
+                <h6>Natsuki Subaru</h6>
+                <p>Best parking service ever! Di ako nalate sa date namin ni Emilia-tan ❤️</p>
+            </div>
+
+            <div class="col s4 offset-l4" id="fahh" style="margin-top: 2em;">
+                <h6>Peter Parker</h6>
+                <p>10/10! Mabait yung staff sa amin ni Gwen lalo na yung Hanna ang pangalan</p>
+            </div>
+            
+            <div class="col s4 offset-l7" id="fahh" style="margin-top: 2em;">
+                <h6>Rimuru Tempest</h6>
+                <p>Ganda nung parking lot location! Wala kaming ganito sa Tempest eh. Kung pwede ko lang sana 'to pag-investan...</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- <div class="input-field container">
+    <i class="material-icons prefix">date_range</i>
+    <input type="date" id="date" class="datepicker">
+    <label for="date">Choose a date you need me for...</label>
+</div> -->
+
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script src="materialize/js/materialize.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('.materialboxed').materialbox();
+        $('.parallax').parallax();
+        $('.tabs').tabs();
+        $('.datepicker').datepicker({
+            disableWeekends: false,
+            yearRange: 1
+        });
+        $('.tooltipped').tooltip();
+        $('.scrollspy').scrollSpy();
+    });
+</script>
+    
