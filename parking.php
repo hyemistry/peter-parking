@@ -9,10 +9,25 @@
 <link rel="stylesheet" href="style.css">
 
 <head>
-<?php include('templates/header.php'); ?>
 <body>
+        
+    <?php include('templates/header.php'); ?>
 
-    <!-- dito yung parking lot stuff -->
+    <div class="container" style="padding-top: 5em; font-family: 'montserrat-light';">
+        <h3>Parking a Spot</h3>
+    </div>
+
+    <section class="container grey-text" id="diablo" style="padding-top: 2em;">
+        <form action="" class="white">
+            <label>Email Address:</label>
+            <input type="text" name="email">
+            <div class="center">
+                <input type="Submit" name="Submit" class="btn brand z-depth-0">
+            </div>
+        </form>
+    </section>
+    
+    <?php include('templates/footer.php'); ?>
     
 </body>
 </html>

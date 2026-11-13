@@ -29,13 +29,17 @@
 /* KAJSLDJLKSAJKDJASLJDKASJDLSJKDJKS 
 /* IGNORE, MAY SPACE TALAGA RITO */
 
+body{
+    background-image: linear-gradient(to bottom, #b9dbf0, white, #b9dbf0);
+}
+
 .carousel {
-  display: flex;
-  margin: 75px auto;
-  margin-top: 10em !important;
-  width: 110%;
-  overflow-x: auto;
-  position: absolute;
+    display: flex;
+    margin: 75px auto;
+    margin-top: 10em !important;
+    width: 110%;
+    overflow-x: auto;
+    position: absolute;
 }
 
 .carousel::-webkit-scrollbar{
