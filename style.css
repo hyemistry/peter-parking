@@ -29,49 +29,7 @@
 /* KAJSLDJLKSAJKDJASLJDKASJDLSJKDJKS 
 /* IGNORE, MAY SPACE TALAGA RITO */
 
-.carousel {
-  display: flex;
-  margin: 75px auto;
-  margin-top: 10em !important;
-  width: 110%;
-  overflow-x: auto;
-  position: absolute;
-}
-
-.carousel::-webkit-scrollbar{
-    display: none;
-}
-
-.carousel .group{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: spin 20s linear infinite;
-}
-
-.carousel:hover{
-    animation-play-state: paused;
-}
-
-.carousel .group .card{
-    flex: 0 0 auto;
-    width: 50em;
-    height: 70em;
-    background: transparent;
-    align-content: center;
-    text-align: center;
-}
-
-.carousel .group .card img{
-    mask-image: linear-gradient(to bottom, black 60%, transparent);
-}
-
-
-@keyframes spin{
-    from{
-        translate: 0%;
-    }
-    to{
-        translate: -100%;
-    }
+#lightningmcqueen {
+    margin-bottom: 3em;
+    width: 15%;
 }

@@ -11,9 +11,9 @@
 
 <head>
     <style>
-        body{
+        /* body{
             background-image: linear-gradient(to bottom, #b9dbf0, white, #b9dbf0);
-        }
+        } */
 
         nav a img{
             width: 15%;
