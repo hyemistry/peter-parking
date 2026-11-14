@@ -17,8 +17,8 @@
                 </a>
 
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
+                    <!-- <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About</a></li> -->
                     <button id="hotdog" class="btn" style="
                     background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
                         <li><a href="parking.php" style="color: white; font-family: 'montserrat-light';">Park Now!</a></li>

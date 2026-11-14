@@ -1,15 +1,10 @@
 <?php 
 include('config/db_connect.php');
-   $username = $password = $date = $time_in = $time_out = $type = $color = $plate_number = $brand = $code = $slot = '';
+   $username = $password = $date = $date2 = $time_in = $time_out = $type = $color = $plate_number = $brand = $code = $slot = '';
 
-   $errors = array('username' => '', 'password' => '', 'date' => '', 'time_in' => '', 'time_out' => '', 'type' =>'', 'color' => '', 'plate_number' => '', 'brand' => '', 'code' => '', 'slot' => '');
-   // make query for date
+   $errors = array('username' => '', 'password' => '', 'date' => '', 'date2' => '', 'time_in' => '', 'time_out' => '', 'type' =>'', 'color' => '', 'plate_number' => '', 'brand' => '', 'code' => '', 'slot' => '');
 
-
-
-
-   //end of query for date
-
+   // not finished yet, just need the parking lot design
    if(isset($_POST['submit'])){
 
    
@@ -43,6 +38,25 @@ include('config/db_connect.php');
          }
       }
 
+      if(empty($_POST['date2'])){
+         $errors['date2'] = 'A date is required <br/>';
+      } else {
+         $date2 =  $_POST['date2'];
+         $date_compare2 = date("Y/m/d");
+         if($date2 <= $date_compare){
+            $errors['date'] = 'Date must not be before present date.';
+         }else {
+            // lmao, would be funny if they set the date far into the future
+         }
+      }
+
+       if ($date >= $date2){
+         $errors['date2'] = 'End of reservation cannot be earlier than start of reservation.';
+         $errors['date'] = 'Start of reservation cannot be later than start of reservation.';
+      }else{
+
+      }
+
       if(empty($_POST['time_in'])){
          $errors['time_in'] = 'Time-in is required <br/>';
       } else {
@@ -59,20 +73,22 @@ include('config/db_connect.php');
          $errors['time_in'] = 'Time-in cannot be more than time-out';
          $errors['time_out'] = 'Time-out cannot be more than time-in';
       }else{
-         $sql1 = "SELECT time_in, time_out, 'date' FROM user_info ORDER BY created_at";
+         $sql1 = "SELECT time_in, time_out, 'date', date2 FROM user_info ORDER BY created_at";
 
          $result1 = mysqli_query($conn, $sql1);
 
          $user_infos1 = mysqli_fetch_all($result1, MYSQLI_ASSOC);
 
          mysqli_free_result($result1);
-         
-         //Just realized that this doesnt account for overnight parking lmao
 
          foreach($user_infos1 as $user_info1){
-            if ($date == $user_info1['date'] && $time_out >= $user_info1['time_in'] && $time_in <= $user_info1['time_out']){
-               echo 'lmaaaoooo';
-            }
+            if ($date == $user_info1['date'] && $time_out >= $user_info1['time_in'] && $time_in <= $user_info1['time_out'] && $date >= $user_info1['date2'] && $date2 <= $user_info1['date']){
+               $errors['date'] = 'This date slot is already reserved';
+               $errors['date2'] = 'This date slot is already reserved';
+               $errors['time_in'] = 'This time slot is already reserved';
+               $errors['time_out'] = 'This time slot is already reserved';
+               $errors[''] = 'This time slot is already reserved';
+            } 
          }
       }
 
@@ -108,11 +124,11 @@ include('config/db_connect.php');
                 </a>
 
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
+                    <!-- <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About</a></li> -->
                     <button id="hotdog" class="btn" style="
                     background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
-                        <li><a href="reservation.php" style="color: white; font-family: 'montserrat-light';">Your Reservations</a></li>
+                        <li><a href="reservation.php" style="color: white; font-family: 'montserrat-light';">Active Reservations</a></li>
                     </button>
                 </ul>
             </div>
@@ -141,9 +157,13 @@ include('config/db_connect.php');
             <label>Username:</label>
             <input type="text" name = "username" value = <?php echo $username?>>
          </div>
-         <div class="col s6">
-            <label>Date of Reservation:</label>
+         <div class="col s3">
+            <label>Start of Reservation:</label>
             <input type="date" name = "date" value = <?php echo $date?>>
+         </div>
+         <div class="col s3">
+            <label>End of Reservation:</label>
+            <input type="date" name = "date2" value = <?php echo $date2?>>
          </div>
       </div>
 
@@ -185,8 +205,14 @@ include('config/db_connect.php');
       </div>
    </form>
 
- <?php include('templates/footer.php'); ?>
 </section>
+ 
+<!-- couldnt figure out why the section couldnt get bottom margin so i just made a br lmao -->
+<div class="gap">
+   <br>
+   <br>
+</div>
 
+<?php include('templates/footer.php'); ?>
 
 <html>
