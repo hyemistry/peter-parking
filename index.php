@@ -24,6 +24,8 @@
     }
 </style>
 
+<body id="index_background">
+
 <section id="lightyagami" style="padding-top: 4em;">
     <div id="sheesh" style="font-family: 'montserrat-light'; padding-top: 11em;" class="center-align">
         <h5 class="center-align" style="margin: 0 auto;">Welcome to</h5>
@@ -31,6 +33,8 @@
         <h5 class="center-align" style="margin: 0 auto; padding-top: 10px;">The best parking solution in the city!</h5>
     </div>
 </section>
+
+</body>
 
 
 <!-- GO AHEAD BOSS DO WHATEVER U WANT -->
