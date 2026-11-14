@@ -78,6 +78,10 @@
                     background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
                         <li><a href="parking.php" style="color: white; font-family: 'montserrat-light';">Park Now!</a></li>
                     </button>
+                    <button id="hotdog" class="btn" style="
+                    background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
+                        <li><a href="reservation.php" style="color: white; font-family: 'montserrat-light';">Your Reservations</a></li>
+                    </button>
                 </ul>
             </div>
             
