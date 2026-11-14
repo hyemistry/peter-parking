@@ -55,6 +55,16 @@
             transition: 0.5s all ease;
         }
 
+        table {
+            border-collapse: separate;
+            border-spacing: 10px 10px; 
+        }
+        th, td {
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 40px;
+        }
+
     </style>
 </head>
 <body>

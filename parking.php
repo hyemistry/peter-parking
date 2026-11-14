@@ -87,7 +87,7 @@ include('config/db_connect.php');
                $errors['date2'] = 'This date slot is already reserved';
                $errors['time_in'] = 'This time slot is already reserved';
                $errors['time_out'] = 'This time slot is already reserved';
-               $errors[''] = 'This time slot is already reserved';
+               $errors['slot'] = 'This slot is already reserved';
             } 
          }
       }
@@ -200,14 +200,14 @@ include('config/db_connect.php');
       <input type="text" name = "brand" value = <?php echo $brand?>>
       </div>
 
+      <!-- insert table here -->
+
       <div class="center" style = "margin-top: 2em">
          <input type="submit" name = "submit" value = "submit" class= "btn z-depth-0">
       </div>
    </form>
 
 </section>
- 
-<!-- Boss, I need ya to put the parking lot buttons/map below here! even just a columns of like parking lot buttons would do. imma set the value for the buttons so it can match up with the database. also if you wanna go and beautify the form above, please do so, i succ at html lmaoaoao-->
 
 <!-- couldnt figure out why the section couldnt get bottom margin so i just made a br lmao -->
 <div class="gap">
@@ -215,6 +215,12 @@ include('config/db_connect.php');
    <br>
 </div>
 
-<?php include('templates/footer.php'); ?>
+<div class="container">
+   <form action="parking.php" class="white" method = "POST">
+   
+   </form>
+</div>
 
+<?php include('templates/footer.php'); ?>
+   
 <html>

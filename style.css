@@ -123,3 +123,8 @@ body::selection{
     margin-bottom: 3em;
     width: 15%;
 }
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
