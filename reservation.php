@@ -34,10 +34,9 @@
     </nav>
 </header>
 
-<section style = "padding-top: 4em">
-   <div class="container" style = "margin-left: 4em; margin-top: 2em">
-      <h4 style = "font-family: montserrat-light">Active Reservations:</h4>
-   </div>
-</section>
-
+    <section style = "padding-top: 4em">
+        <div class="container" style = "margin-left: 4em; margin-top: 2em">
+            <h4 style = "font-family: montserrat-light">Active Reservations:</h4>
+        </div>
+    </section>
 <html>
