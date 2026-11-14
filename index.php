@@ -6,17 +6,36 @@
 
 <?php include('templates/header.php'); ?>
 
+<style>
+    #lightyagami{
+        background-image: url("stuff/photos/parkingaest.jpg");
+        height: 75vh;
+        background-size: cover;
+        background-position: 50% 100%;
+        box-shadow: 0px 0px 20px 20px #191919;
+    }
+
+    #lightyagami #sheesh{
+        padding-top: 5em;
+    }
+
+    #lightyagami #sheesh h5{
+        color: white;
+    }
+</style>
+
+<section id="lightyagami" style="padding-top: 4em;">
+    <div id="sheesh" style="font-family: 'montserrat-light'; padding-top: 11em;" class="center-align">
+        <h5 class="center-align" style="margin: 0 auto;">Welcome to</h5>
+        <img style="width: 30%; margin-top: -1em;" src="stuff/photos/logo2.png" alt="ParkUp">
+        <h5 class="center-align" style="margin: 0 auto; padding-top: 10px;">The best parking solution in the city!</h5>
+    </div>
+</section>
+
+
 <!-- GO AHEAD BOSS DO WHATEVER U WANT -->
 <!--bruh-->
-
-    <section id="lightningmcqueen" style="padding-top: 4em;">
-    </section>
-    
-    <div id="sheesh" style="font-family: 'montserrat-light';" class="center-align">
-        <h5 class="center-align" style="margin: 0 auto;">Welcome to</h5>
-        <img style="width: 25%;" src="stuff/photos/logo.png" alt="ParkUp">
-        <h6 class="center-align" style="margin: 0 auto; padding-top: 10px;">The best parking solution in the city!</h6>
-    </div>
+   
 
     <?php include('content.php'); ?>
     <?php include('templates/footer.php'); ?>
