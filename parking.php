@@ -207,6 +207,8 @@ include('config/db_connect.php');
 
 </section>
  
+<!-- Boss, I need ya to put the parking lot buttons/map below here! even just a columns of like parking lot buttons would do. imma set the value for the buttons so it can match up with the database. also if you wanna go and beautify the form above, please do so, i succ at html lmaoaoao-->
+
 <!-- couldnt figure out why the section couldnt get bottom margin so i just made a br lmao -->
 <div class="gap">
    <br>
