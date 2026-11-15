@@ -55,6 +55,42 @@
             transition: 0.5s all ease;
         }
 
+        table {
+            border-collapse: separate;
+            border-spacing: 10px 10px; 
+        }
+        th, td {
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 40px;
+        }
+
+        i.icon-green {
+            color: white;
+        }
+        i.icon_orange{
+            color: orange;
+        }
+        .subsub {
+            color: #7F00FF;
+        }
+        #parkinglot {
+            max-width: 38%;
+            position: absolute;
+            margin-left: 25em;
+            margin-top: 1em;
+            border-radius: 28px;
+        }
+        #car_details {
+            margin-left: 50px;
+            position: relative;
+        }
+        #slot_title {
+            margin-bottom: 1em;
+        }
+        #row_1{
+            margin-left: 2em;
+        }
     </style>
 </head>
 <body>
