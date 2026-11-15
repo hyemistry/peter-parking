@@ -39,7 +39,7 @@
     </section>
 
     <div class="container center" style = "margin-top: 2em; margin-bottom: 1em;">
-    <h4 style = "font-family: montserrat-light">Active Reservations:</h4>
+    <h4 style = "font-family: montserrat-light">Active Reservations</h4>
     </div>
 
     <div class="container">
@@ -94,4 +94,21 @@
         </div>
     </div>
        
+<div class="container">
+    <div class="row">
+        <div class="col s6 offset-l3">
+            <div class="card z-depth-0" style="border: 1px solid black;">
+                <div class="card-content center-align">
+                    <h6>test</h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ipsam, corrupti accusamus inventore sint itaque sed ut molestias omnis libero commodi velit consequatur officiis ipsum possimus beatae expedita. Enim, atque!</p>
+                </div>
+                <div class="card-action right-align">
+                    <a href="details.php?id=<php? echo $date['id']?>">test button</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
 <html>
