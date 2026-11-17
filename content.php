@@ -7,6 +7,14 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
+    body{
+        background-image: linear-gradient(to bottom, #906767, white, #99c4da);
+    }
+
+    body span::selection{
+        color:black;
+    }
+
     hr{
         border: 1px solid #268ad6;
         width: 80em;
@@ -92,6 +100,7 @@
         box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
 }
 
+
 </style>
 
 
@@ -112,7 +121,7 @@
             </div>
 
             <div class="col s4">
-                <h6>Great Parking Spots</h6>
+                <h6>Near R&H Park</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat atque saepe, ad expedita error nulla nemo ipsa quos beatae incidunt eaque rerum suscipit consequuntur, eum porro nisi doloremque fugiat est?</p>
             </div>
 
@@ -141,17 +150,17 @@
         <div class="row">
             <div class="col s4 offset-l1" id="fahh">
 
-                <h6>Natsuki Subaru</h6>
+                <h6><span>Natsuki Subaru</span></h6>
                 <p>Best parking service ever! Di ako nalate sa date namin ni Emilia-tan ❤️</p>
             </div>
 
             <div class="col s4 offset-l4" id="fahh" style="margin-top: 2em;">
-                <h6>Peter Parker</h6>
+                <h6><span>Peter Parker</span></h6>
                 <p>10/10! Mabait yung staff sa amin ni Gwen lalo na yung Hanna ang pangalan</p>
             </div>
             
             <div class="col s4 offset-l7" id="fahh" style="margin-top: 2em;">
-                <h6>Rimuru Tempest</h6>
+                <h6><span>Rimuru Tempest</span></h6>
                 <p>Ganda nung parking lot location! Wala kaming ganito sa Tempest eh. Kung pwede ko lang sana 'to pag-investan...</p>
             </div>
 

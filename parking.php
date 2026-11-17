@@ -195,8 +195,39 @@ include('config/db_connect.php');
       color: grey;
    }
 
+    #butones{
+        background-color: #268ad6;
+        border-radius: 5em;
+        text-align: center;
+        width: 11em;
+        height: 4em;
+        margin-top: 2em;
+    }
 
+    #butones:focus{
+      border:none;
+      outline: none;
+    }
 
+    #butones a{
+        text-decoration: none;
+    }
+
+    #butones span{
+        font-family: 'montserrat-light';
+        font-size: 1.3em;
+        color: white;
+    }
+
+    #butones:hover{
+        box-shadow: 0px 0px 10px 3px #ea8130;
+        font-weight: bold;
+        transition: 0.5s all ease;
+    }
+   
+   #bruh label{
+      font-size: 2em;
+   }
 
 </style>
 
@@ -333,7 +364,7 @@ include('config/db_connect.php');
    <br/>
    <br/>
 
-   <div class="row" style="margin-left: 5em;">
+   <div id="bruh" class="row" style="margin-left: 5em;">
       <div class="input-field col s1" style = "margin-top: 2em">
       <p>
       <label for = "A1">
@@ -458,15 +489,15 @@ include('config/db_connect.php');
    </div>
 
       <div class="center" style = "margin-top: 2em">
-         <button class="btn waves-effect waves-light" type="submit" name="submit" value = "submit">Submit
+         <button id="butones" class="btn" type="submit" name="submit" value = "submit"><span>Submit</span>
             <i class="material-icons right icon-green">send</i>
          </button>
       </div>
+      
    </form>
 </div>
 <!-- couldnt figure out why the section couldnt get bottom margin so i just made a br lmao -->
 <div class="gap" style = "margin-bottom: 3em">
-   <br>
    <br>
 </div>
 

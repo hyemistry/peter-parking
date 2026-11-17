@@ -69,3 +69,8 @@ table {
     margin-left: auto;
     margin-right: auto;
 }
+
+body::selection{
+  background-color: #edae49;
+  color: white;
+}

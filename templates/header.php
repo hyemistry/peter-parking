@@ -1,4 +1,4 @@
-<title>Peter's Parking Lot</title>
+<title>ParkUp</title>
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -11,9 +11,10 @@
 
 <head>
     <style>
-        /* body{
-            background-image: linear-gradient(to bottom, #b9dbf0, white, #b9dbf0);
-        } */
+        body::selection{
+            background-color: #edae49;
+            color:white;
+        }
 
         nav a img{
             width: 15%;
@@ -57,6 +58,16 @@
             transition: 0.5s all ease;
         }
 
+        ul li a:focus{
+            border: none;
+            outline: none;
+        }
+
+        #logo:focus{
+            border: none;
+            outline: none;
+        }
+
     </style>
 </head>
 <body>
@@ -64,7 +75,7 @@
 <header>
     <nav class="white">
         <div class="container">
-            <a href="index.php"><img src="stuff/photos/logo.png" alt="ParkUp"></a>
+            <a id="logo" href="index.php"><img src="stuff/photos/logo.png" alt="ParkUp"></a>
 
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
                     <i class="material-icons">menu</i>
