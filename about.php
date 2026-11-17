@@ -51,13 +51,8 @@
     }
 </style>
 
-<div class="container" style="padding-top: 5em;">
-    <h1>ikaw na bahala dito boss do whatev u want</h1>
-    <h2>i placed these as placeholders</h2>
-</div>
-
 <section class="container" id="susie">
-    <h3 class="center-align" style="margin-bottom: 1em;">Flounders</h3>
+    <h3 class="center-align" style="margin-bottom: 1em;">Founders</h3>
 
     <div class="row">
         <div class="center col s6">
@@ -75,26 +70,10 @@
 </section>
 
 <section class="container" id="charlie">
-    <h3 class="center-align" style="margin-bottom: 1em;">Staff</h3>
-
-    <div class="row">
-        <div class="center col s4">
-            <img id="pix" src="stuff/photos/images.png" alt="placeholder" style="width: 25%;">
-            <h6 id="boss">Peter Parker</h6  >
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit consequuntur distinctio ducimus beatae! Nulla pariatur fuga deleniti eos nobis vitae sequi voluptatem. Sint voluptatem, est sequi voluptate soluta sit consequatur.</p>
-        </div>
-
-        <div class="center col s4">
-            <img id="pix" src="stuff/photos/images.png" alt="placeholder" style="width: 25%;">
-            <h6 id="boss">Sandara Park</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit consequuntur distinctio ducimus beatae! Nulla pariatur fuga deleniti eos nobis vitae sequi voluptatem. Sint voluptatem, est sequi voluptate soluta sit consequatur.</p>
-        </div>
-
-        <div class="center col s4">
-            <img id="pix" src="stuff/photos/images.png" alt="placeholder" style="width: 25%;">
-            <h6 id="boss">Alexander Parkington</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit consequuntur distinctio ducimus beatae! Nulla pariatur fuga deleniti eos nobis vitae sequi voluptatem. Sint voluptatem, est sequi voluptate soluta sit consequatur.</p>
-        </div>
+    <h3 class="center-align" style="margin-bottom: 1em;">About</h3>
+    
+    <div class="container">
+        <p><span>ParkUp</span> is an online vehicle parking service </p>
     </div>
 </section>
 
