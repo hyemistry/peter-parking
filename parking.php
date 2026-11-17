@@ -99,8 +99,8 @@ include('config/db_connect.php');
          $errors['plate_number'] = 'A plate number is required <br/>';
       } else {
          $plate_number = $_POST['plate_number'];
-         if(!preg_match('/^[a-zA-Z0-9_]{3,16}$/', $plate_number)){
-            $errors['plate_number'] = 'Plate numbers must be alphanumeric and underscores only.';
+         if(!preg_match('/^[a-zA-Z0-9]{3,16}$/', $plate_number)){
+            $errors['plate_number'] = 'Plate number must be alphanumeric only.';
          }
       }
 
@@ -174,18 +174,36 @@ include('config/db_connect.php');
    
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="materialize/css/materialize.min.css">
+<link rel="stylesheet" href="style.css">
 
 <?php include('templates/alt_header.php'); ?>
+
+<style>
+   input{
+      caret-color: #268ad6;
+      border: none;
+   }
+
+   input::placeholder{
+      font-family: 'montserrat-light';
+      color: grey;
+   }
+
+
+
+
+</style>
 
 <!-- GO AHEAD BOSS DO WHATEVER U WANT -->
 <!--bruh-->
 
-<header>
+<!-- <header>
     <nav class="white">
         <div class="container">
             <a href="index.php"><img src="stuff/photos/logo.png" alt="ParkUp"></a>
@@ -195,8 +213,8 @@ include('config/db_connect.php');
                 </a>
 
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <!-- <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li> -->
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
                     <button id="hotdog" class="btn" style="
                     background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
                         <li><a href="reservation.php" style="color: white; font-family: 'montserrat-light';">Active Reservations</a></li>
@@ -210,7 +228,7 @@ include('config/db_connect.php');
             <li><a href="reservation.php">Reservation</a></li>
         </ul>
     </nav>
-</header>
+</header> -->
 
 <!-- Empty, so that theres space above the rows -->
 <section style = "margin-top: 6em">
@@ -299,14 +317,23 @@ include('config/db_connect.php');
    </div>
    
 
-   <div>
+   <!-- <div>
       <img id = "parkinglot" src="stuff/photos/parkinglot.png" alt="car">
+   </div> -->
+
+   <div class="container">
+      <div class="row">
+         <div class="col s4">
+            <img id = "parkinglot" src="stuff/photos/parkinglot.png" alt="car" class="responsive-img">
+         </div>
+      </div>
    </div>
 
    <br/>
    <br/>
    <br/>
-   <div class="row">
+
+   <div class="row" style="margin-left: 5em;">
       <div class="input-field col s1" style = "margin-top: 2em">
       <p>
       <label for = "A1">

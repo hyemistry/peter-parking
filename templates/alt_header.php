@@ -95,6 +95,31 @@
 </head>
 <body>
 
+<header>
+    <nav class="white">
+        <div class="container">
+            <a href="index.php"><img src="stuff/photos/logo.png" alt="ParkUp" style="margin-top: 0.7em;"></a>
+
+                <a href="#" class="sidenav-trigger" data-target="mobile-links">
+                    <i class="material-icons">menu</i>
+                </a>
+
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <button id="hotdog" class="btn" style="
+                    background-color: #268ad6; border-radius: 1em; margin-left: 1em; margin-top: 1em;">
+                        <li><a href="reservation.php" style="color: white; font-family: 'montserrat-light';">Active Reservations</a></li>
+                    </button>
+                </ul>
+            </div>
+            
+        <ul class="sidenav" id="mobile-links">
+            <li><a href="about.php">About</a></li>
+            <li><a href="contactus.php">Contact Us</a></li>
+            <li><a href="parking.php">Reservation</a></li>
+        </ul>
+    </nav>
+</header>
+
     <script src="jquery/jquery-3.3.1.min.js"></script>
     <script src="materialize/js/materialize.min.js"></script>
 
