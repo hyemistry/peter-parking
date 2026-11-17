@@ -79,7 +79,7 @@
                     </button>
                     <button id="hotdog" class="btn" style="
                     background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
-                        <li><a href="reservation.php" style="color: white; font-family: 'montserrat-light';">Active Reservations</a></li>
+                        <li><a href="reservation.php" style="color: white; font-family: 'montserrat-light';">Your Reservation</a></li>
                     </button>
                 </ul>
             </div>
