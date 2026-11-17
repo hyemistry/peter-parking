@@ -76,26 +76,7 @@ include('config/db_connect.php');
       } else {
          $time_out =  $_POST['time_out'];
       }
-
-         $sql1 = "SELECT time_in, time_out, 'date', date2, slot FROM user_info ORDER BY created_at";
-
-         $result1 = mysqli_query($conn, $sql1);
-
-         $user_infos1 = mysqli_fetch_all($result1, MYSQLI_ASSOC);
-
-         mysqli_free_result($result1);
-
-         foreach($user_infos1 as $user_info1){
-            if ($slot == $user_info1['slot'] && $date == $user_info1['date'] && $time_out >= $user_info1['time_in'] && $time_in <= $user_info1['time_out'] && $date >= $user_info1['date2'] && $date2 <= $user_info1['date']){
-               $errors['date'] = 'Please pick another time slot for this date.';
-               $errors['date2'] = 'Please pick another time slot for this date.';
-               $errors['time_in'] = 'This time slot is already reserved.';
-               $errors['time_out'] = 'This time slot is already reserved.';
-               $errors['slot'] = 'This parking space at this time slot is already reserved';
-            }
-         }
       
-
       if(empty($_POST['type'])){
          $errors['type'] = 'A vehicle type is required <br/>';
       } else {
@@ -144,6 +125,25 @@ include('config/db_connect.php');
       }
 
       $code = generateRandomString(7);
+
+      // code for overlap
+      $sql1 = "SELECT time_in, time_out, 'date', date2, slot FROM user_info ORDER BY created_at";
+
+         $result1 = mysqli_query($conn, $sql1);
+
+         $user_infos1 = mysqli_fetch_all($result1, MYSQLI_ASSOC);
+
+         mysqli_free_result($result1);
+
+         foreach($user_infos1 as $user_info1){
+            if ($slot == $user_info1['slot'] && $time_out >= $user_info1['time_in'] && $time_in <= $user_info1['time_out'] && $date >= $user_info1['date2'] && $date2 <= $user_info1['date']){
+               $errors['date'] = 'Please pick another time slot for this date.';
+               $errors['date2'] = 'Please pick another time slot for this date.';
+               $errors['time_in'] = 'This time slot is already reserved.';
+               $errors['time_out'] = 'This time slot is already reserved.';
+               $errors['slot'] = 'This parking space at this time slot is already reserved';
+            }
+         }
 
       if(array_filter($errors)){
         
@@ -313,7 +313,9 @@ include('config/db_connect.php');
 
    <div class = "container center">
       <h4 id= "slot_title" style = "font-family:'montserrat-light'">Parking Spaces</h4>
+      <div class="red-text"><?php echo $errors['slot']; ?></div>
    </div>
+   
 
    <!-- <div>
       <img id = "parkinglot" src="stuff/photos/parkinglot.png" alt="car">
@@ -443,9 +445,6 @@ include('config/db_connect.php');
       </p>
 
    </div>
-
-
-      <div class="red-text"><?php echo $errors['slot']; ?></div>
    <!-- div row -->
    </div>
  <!-- div container -->
