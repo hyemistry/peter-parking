@@ -66,6 +66,40 @@ if(isset($_POST['submit'])){
 
 <?php include('templates/alt_header.php'); ?>
 
+<style>
+
+    #butones{
+        background-color: #268ad6;
+        border-radius: 5em;
+        text-align: center;
+        width: 11em;
+        height: 4em;
+        margin-top: 2em;
+    }
+
+    #butones:focus{
+      border:none;
+      outline: none;
+    }
+
+    #butones a{
+        text-decoration: none;
+    }
+
+    #butones span{
+        font-family: 'montserrat-light';
+        font-size: 1.3em;
+        color: white;
+    }
+
+    #butones:hover{
+        box-shadow: 0px 0px 10px 3px #ea8130;
+        font-weight: bold;
+        transition: 0.5s all ease;
+    }
+
+</style>
+
 <!-- Just the header without the button below -->
 <header>
     <nav class="white">
@@ -98,14 +132,14 @@ if(isset($_POST['submit'])){
     <section style = "padding-top: 10em">
     </section>
 
-    <div class="container center" style = "margin-top: 2em; margin-bottom: 1em;">
+    <div class="container center" style = "margin-top: 1em; margin-bottom: 1em;">
     <h4 style = "font-family: montserrat-light">Your reservation details:</h4>
     </div>
 
 
 <!-- The forms for user detail request-->
 
-<div class="container" style = "margin-bottom: 14em">
+<div class="container" style = "margin-bottom: 6em;">
     <form action="reservation.php" method = "POST">
 
 
@@ -128,8 +162,8 @@ if(isset($_POST['submit'])){
             <div class="red-text"><?php echo $errors['general']; ?></div>
 
 
-    <div class="center" style = "margin-top: 2em">
-        <button class="btn waves-effect waves-light" type="submit" name="submit" value = "submit">Submit
+    <div class="center">
+        <button id="butones" class="btn waves-effect waves-light" type="submit" name="submit" value = "submit"><span>Submit</span>
             <i class="material-icons right icon-green">send</i>
         </button>
     </div>
@@ -142,7 +176,7 @@ if(isset($_POST['submit'])){
 
  <?php include('templates/footer.php'); ?>
        
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col s6 offset-l3">
             <div class="card z-depth-0" style="border: 1px solid black;">
@@ -157,6 +191,6 @@ if(isset($_POST['submit'])){
         </div>
     </div>
 </div>
-    
+     -->
 
 <html>
