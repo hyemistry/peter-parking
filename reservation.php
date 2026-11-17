@@ -11,19 +11,12 @@ if(isset($_POST['submit'])){
     if(empty($_POST['username'])){
         $errors['username'] = 'A username is required <br/>';
       } else {
-        $username = $_POST['username'];
-        if(!preg_match('/^[a-zA-Z0-9_]{3,16}$/', $username)){
-            $errors['username'] = 'Username must be alphanumeric and underscores only.';
-        }
+    
       }
 
     if(empty($_POST['password'])){
         $errors['password'] = 'A password is required <br/>';
-      } else {
-        $password = $_POST['password'];
-        if(!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/', $password)){
-            $errors['password'] = 'Password must have a minimum of eight characters, one uppercase letter, one lowercase letter, and one number.';
-        }
+    } else {
 
     }
 
@@ -43,11 +36,6 @@ if(isset($_POST['submit'])){
         }else{
             if ($userinfo['username'] == $_POST['username'] && $userinfo['password'] != $_POST['password']){
                 $errors['general'] = 'You may have entered the wrong password or username. Try again!';
-            }{
-
-            }
-            if ($userinfo['username'] != $_POST['username'] && $userinfo['password'] != $_POST['password']){
-                $errors['username'] = 'There is no such username.';
             }{
 
             }
@@ -119,11 +107,13 @@ if(isset($_POST['submit'])){
                 <i class="material-icons prefix icon_orange">account_circle</i>
                 <input type="text" name = "username" value = <?php echo $username?>>
                 <label>Username:</label>
+                <div class="red-text"><?php echo $errors['username']; ?></div>
             </div>
             <div class="col s6 input-field">
                 <i class="material-icons prefix icon_orange">lock</i>
                 <input type="text" name = "password" value = <?php echo $password?>>
                 <label>Password:</label>
+                <div class="red-text"><?php echo $errors['password']; ?></div>
             </div>
         </div> 
 
