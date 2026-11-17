@@ -1,3 +1,68 @@
+<?php
+
+include('config/db_connect.php');
+
+$username = $password = $id = '';
+
+$errors = array('username' => '', 'password' => '', 'general' => '');
+
+if(isset($_POST['submit'])){
+
+    if(empty($_POST['username'])){
+        $errors['username'] = 'A username is required <br/>';
+      } else {
+        $username = $_POST['username'];
+        if(!preg_match('/^[a-zA-Z0-9_]{3,16}$/', $username)){
+            $errors['username'] = 'Username must be alphanumeric and underscores only.';
+        }
+      }
+
+    if(empty($_POST['password'])){
+        $errors['password'] = 'A password is required <br/>';
+      } else {
+        $password = $_POST['password'];
+        if(!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/', $password)){
+            $errors['password'] = 'Password must have a minimum of eight characters, one uppercase letter, one lowercase letter, and one number.';
+        }
+
+    }
+
+    $sql = 'SELECT * FROM user_info';
+
+    $result = mysqli_query($conn, $sql);
+
+    $user_info = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    mysqli_free_result($result);
+
+    foreach($user_info as $userinfo){
+        if($userinfo['username'] == $_POST['username'] && $userinfo['password'] == $_POST['password']){
+            $id = $userinfo['id'];
+            header("Location: details.php?id=$id");
+
+        }else{
+            if ($userinfo['username'] == $_POST['username'] && $userinfo['password'] != $_POST['password']){
+                $errors['general'] = 'You may have entered the wrong password or username. Try again!';
+            }{
+
+            }
+            if ($userinfo['username'] != $_POST['username'] && $userinfo['password'] != $_POST['password']){
+                $errors['username'] = 'There is no such username.';
+            }{
+
+            }
+            if ($userinfo['username'] != $_POST['username'] && $userinfo['password'] == $_POST['password']){
+                $errors['username'] = 'There is no such username.';
+            }{
+                
+            }
+        }
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -35,63 +100,49 @@
 </header>
 
 
-    <section style = "padding-top: 4em">
+    <section style = "padding-top: 10em">
     </section>
 
     <div class="container center" style = "margin-top: 2em; margin-bottom: 1em;">
-    <h4 style = "font-family: montserrat-light">Active Reservations:</h4>
+    <h4 style = "font-family: montserrat-light">Your reservation details:</h4>
     </div>
 
-    <div class="container">
+
+<!-- The forms for user detail request-->
+
+<div class="container" style = "margin-bottom: 14em">
+    <form action="reservation.php" method = "POST">
+
+
         <div class="row">
-            <div class="col s4">
+            <div class="col s6 input-field">
+                <i class="material-icons prefix icon_orange">account_circle</i>
+                <input type="text" name = "username" value = <?php echo $username?>>
+                <label>Username:</label>
+            </div>
+            <div class="col s6 input-field">
+                <i class="material-icons prefix icon_orange">lock</i>
+                <input type="text" name = "password" value = <?php echo $password?>>
+                <label>Password:</label>
+            </div>
+        </div> 
 
-            </div>
-            <div class="col s4">
-                <form action="reservation.php">
-                    <label>Select a date:</label>
-                    <input type="date">
-                </form>
-            </div>
-        </div>
+
+            <div class="red-text"><?php echo $errors['general']; ?></div>
+
+
+    <div class="center" style = "margin-top: 2em">
+        <button class="btn waves-effect waves-light" type="submit" name="submit" value = "submit">Submit
+            <i class="material-icons right icon-green">send</i>
+        </button>
     </div>
+
+
+    </form>
+</div>
+
     
-    <div style = "margin-top: 2em">
-        <div class="row blue">
 
-            <div class="col s6">
-                <div class="container red">
-                    <table>
-                        <tr>
-                            <td>A1</td>
-                            <td>A1</td>
-                        </tr>
-                        <tr>
-                            <td>A1</td>
-                            <td>A1</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <div class="col s6">
-                <div class="container red">
-                    <table>
-                        <tr>
-                            <td bgcolor = '#ffc400'>A1</td>
-                            <td>A1</td>
-                        </tr>
-                        <tr>
-                            <td>A1</td>
-                            <td>A1</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-
-
-        </div>
-    </div>
+ <?php include('templates/footer.php'); ?>
        
 <html>
