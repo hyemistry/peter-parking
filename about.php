@@ -73,14 +73,14 @@
 
     <div class="row">
         <div class="center col s6">
-            <img id="pix" src="stuff/photos/images.png" alt="placeholder" style="width: 25%;">
+            <img id="pix" src="stuff/photos/rhian.jpg" alt="placeholder" style="width: 25%;">
             <h5 id="boss">Rhian Angeline Lalimo</h5>
             <h6>Back-End Developer</h6>
             <p>Rhian is a dedicated second-year BS Computer Engineering student at the University of Rizal System - Antipolo Campus.</p>
         </div>
 
         <div class="center col s6">
-            <img id="pix" src="stuff/photos/images.png" alt="placeholder" style="width: 25%;">
+            <img id="pix" src="stuff/photos/hanna.jpg" alt="placeholder" style="width: 25%;">
             <h5 id="boss">Hanna Venice Galgo</h5>
             <h6>Front-End Developer</h6>
             <p>Hanna is a dedicated second-year BS Computer Engineering student at the University of Rizal System - Antipolo Campus.</p>

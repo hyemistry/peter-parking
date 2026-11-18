@@ -67,6 +67,18 @@
             border: 1px solid #333;
             border-radius: 6px;
             padding: 40px;
+            border: none;
+            border-collapse: collapse;
+            text-align: center;
+            vertical-align: middle;
+
+        }
+
+       table td h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-align: center;
+            margin: 10px 0;
         }
 
         i.icon-green {
@@ -105,6 +117,10 @@
             border: none;
             outline: none;
         }
+        .brand-text{
+            color: #000000 !important;
+        }
+        
     </style>
 </head>
 <body>
@@ -119,9 +135,15 @@
                 </a>
 
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="contactus.php">Contact Us</a></li>
                     <button id="hotdog" class="btn" style="
-                    background-color: #268ad6; border-radius: 1em; margin-left: 1em; margin-top: 1em;">
-                        <li><a href="reservation.php" style="color: white; font-family: 'montserrat-light';">Active Reservations</a></li>
+                    background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
+                        <li><a href="reservation.php" style="color: white; font-family: 'montserrat-light';">Your Reservation</a></li>
+                    </button>
+                    <button id="hotdog" class="btn" style="
+                    background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
+                        <li><a href="openslots.php" style="color: white; font-family: 'montserrat-light';">Slots</a></li>
                     </button>
                 </ul>
             </div>
