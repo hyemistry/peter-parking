@@ -111,17 +111,17 @@
     <div id="benimaru" class="container">
         <div class="row">
             <div class="col s4" id="col1">
-                <h6>Swift Compliance</h6>
+                <h6><span>Swift Compliance/span></h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem esse autem non aspernatur voluptates possimus tempora quo similique quam! Vel aliquam reprehenderit ducimus mollitia ab quia non quam corporis officia!</p>
             </div>
 
             <div class="col s4" id="col1">
-                <h6>Open 24/7</h6>
+                <h6><span>Open 24/7</span></h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam voluptatibus eum ipsum ipsa ut minus fuga est hic, doloribus dolorem quaerat aperiam vitae quae autem nihil sequi eius? Provident, consectetur.</p>
             </div>
 
             <div class="col s4">
-                <h6>Near R&H Park</h6>
+                <h6><span>Near R&H Park</span></h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat atque saepe, ad expedita error nulla nemo ipsa quos beatae incidunt eaque rerum suscipit consequuntur, eum porro nisi doloremque fugiat est?</p>
             </div>
 
