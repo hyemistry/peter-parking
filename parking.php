@@ -100,7 +100,7 @@ include('config/db_connect.php');
       } else {
          $plate_number = $_POST['plate_number'];
          if(!preg_match('/^[a-zA-Z0-9]{3,16}$/', $plate_number)){
-            $errors['plate_number'] = 'Plate number must be alphanumeric only.';
+            $errors['plate_number'] = 'You have entered an invalid plate number.';
          }
       }
 
