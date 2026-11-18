@@ -143,25 +143,51 @@ include('config/db_connect.php');
 
       $code = generateRandomString(7);
 
-      // code for overlap
-      $sql1 = "SELECT time_in, time_out, date, date2, slot FROM user_info ORDER BY created_at";
+     // code for overlap
 
-         $result1 = mysqli_query($conn, $sql1);
+$sql1 = "SELECT time_in, time_out, date, date2, slot FROM user_info";
 
-         $user_infos1 = mysqli_fetch_all($result1, MYSQLI_ASSOC);
+$result1 = mysqli_query($conn, $sql1);
 
-         mysqli_free_result($result1);
-         
-         foreach ($user_infos1 as $user_info1) {
+$user_infos1 = mysqli_fetch_all($result1, MYSQLI_ASSOC);
 
-    if ($slot == $user_info1['slot'] && $time_out >= $user_info1['time_in'] && $time_in <= $user_info1['time_out'] && $date <= $user_info1['date2'] && $date2 <= $user_info1['date']) {
-      $errors['date'] = 'Please pick another time slot for this date.';
-      $errors['date2'] = 'Please pick another time slot for this date.';
-      $errors['time_in'] = 'This time slot is already reserved.';
-      $errors['time_out'] = 'This time slot is already reserved.';
-      $errors['slot'] = 'This parking space at this time slot is already reserved';
+mysqli_free_result($result1);
+
+// Convert the proposed reservation into continuous timestamps
+$new_start = strtotime($date . ' ' . $time_in);
+$new_end = strtotime($date2 . ' ' . $time_out);
+
+foreach ($user_infos1 as $user_info1) {
+
+    // Only check reservations using the same parking slot
+    if ($slot == $user_info1['slot']) {
+
+        // Convert the existing reservation into continuous timestamps
+        $existing_start = strtotime(
+            $user_info1['date'] . ' ' . $user_info1['time_in']
+        );
+
+        $existing_end = strtotime(
+            $user_info1['date2'] . ' ' . $user_info1['time_out']
+        );
+
+        // Check if the two reservations overlap
+        if (
+            $new_start < $existing_end &&
+            $new_end > $existing_start
+        ) {
+
+            $errors['date'] = 'Please pick another time slot for this date.';
+            $errors['date2'] = 'Please pick another time slot for this date.';
+            $errors['time_in'] = 'This time slot is already reserved.';
+            $errors['time_out'] = 'This time slot is already reserved.';
+            $errors['slot'] = 'This parking space at this time slot is already reserved';
+
+            break;
+        }
     }
 }
+
 
       if(array_filter($errors)){
         
@@ -203,7 +229,6 @@ include('config/db_connect.php');
 <?php include('templates/alt_header.php'); ?>
 
 <style>
-
    input{
       caret-color: #268ad6;
       border: none;
@@ -218,8 +243,8 @@ include('config/db_connect.php');
         background-color: #268ad6;
         border-radius: 5em;
         text-align: center;
-        width: 12em;
-        height: 3.5em;
+        width: 11em;
+        height: 4em;
         margin-top: 2em;
     }
 
@@ -289,7 +314,7 @@ include('config/db_connect.php');
 </div>
 
 <section class="container" style = "margin-top: 3em">
-   <form action="parking.php"  method = "POST">
+   <form action="parking.php" class="white" method = "POST">
    
       <div class="row">
          <div class="col s6 input-field">
@@ -508,7 +533,7 @@ include('config/db_connect.php');
    </div>
 
       <div class="center" style = "margin-top: 2em">
-         <button id="butones" class="btn" type="submit" name="submit" value = "submit"><span>Reserve</span>
+         <button id="butones" class="btn" type="submit" name="submit" value = "submit"><span>Submit</span>
             <i class="material-icons right icon-green">send</i>
          </button>
       </div>
