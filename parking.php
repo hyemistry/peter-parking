@@ -144,23 +144,24 @@ include('config/db_connect.php');
       $code = generateRandomString(7);
 
       // code for overlap
-      $sql1 = "SELECT time_in, time_out, 'date', date2, slot FROM user_info ORDER BY created_at";
+      $sql1 = "SELECT time_in, time_out, date, date2, slot FROM user_info ORDER BY created_at";
 
          $result1 = mysqli_query($conn, $sql1);
 
          $user_infos1 = mysqli_fetch_all($result1, MYSQLI_ASSOC);
 
          mysqli_free_result($result1);
+         
+         foreach ($user_infos1 as $user_info1) {
 
-         foreach($user_infos1 as $user_info1){
-            if ($slot == $user_info1['slot'] && $time_out >= $user_info1['time_in'] && $time_in <= $user_info1['time_out'] && $date >= $user_info1['date2'] && $date2 <= $user_info1['date']){
-               $errors['date'] = 'Please pick another time slot for this date.';
-               $errors['date2'] = 'Please pick another time slot for this date.';
-               $errors['time_in'] = 'This time slot is already reserved.';
-               $errors['time_out'] = 'This time slot is already reserved.';
-               $errors['slot'] = 'This parking space at this time slot is already reserved';
-            }
-         }
+    if ($slot == $user_info1['slot'] && $time_out >= $user_info1['time_in'] && $time_in <= $user_info1['time_out'] && $date <= $user_info1['date2'] && $date2 <= $user_info1['date']) {
+      $errors['date'] = 'Please pick another time slot for this date.';
+      $errors['date2'] = 'Please pick another time slot for this date.';
+      $errors['time_in'] = 'This time slot is already reserved.';
+      $errors['time_out'] = 'This time slot is already reserved.';
+      $errors['slot'] = 'This parking space at this time slot is already reserved';
+    }
+}
 
       if(array_filter($errors)){
         
@@ -178,7 +179,7 @@ include('config/db_connect.php');
             $date2 = mysqli_real_escape_string($conn, $_POST['date2']);
             $slot = mysqli_real_escape_string($conn, $_POST['slot']);
 
-            $sql = "INSERT INTO user_info(username, password, date, date2, time_in, time_out, type, color, plate_number, brand, code, slot) VALUES('$username', '$password',  '$date', ' $date2',  '$time_in',  '$time_out',  '$type', ' $color',  '$plate_number', ' $brand',  '$code', '$slot')";
+            $sql = "INSERT INTO user_info(username, password, date, date2, time_in, time_out, type, color, plate_number, brand, code, slot) VALUES('$username', '$password',  '$date', '$date2',  '$time_in',  '$time_out',  '$type', '$color',  '$plate_number', '$brand',  '$code', '$slot')";
             
             if(mysqli_query($conn, $sql)){
                header('Location: reservation.php');
