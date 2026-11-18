@@ -28,19 +28,25 @@ if(isset($_GET['id'])){
 
     mysqli_free_result($result);
 }
-    $cost = '';
-    // deletable
+
+$cost = '';
+
+if($slotdetails){
+
+    // Calculate reservation cost
     $date_in = $slotdetails['date'];
     $date_out = $slotdetails['date2'];
-    $i = '';
+
+    $i = 0;
+
     do {
         $date_in = date('Y-m-d', strtotime('+1 day', strtotime($date_in)));
         $i++;
     } while ($date_in <= $date_out);
 
-    $cost = $i*50;
+    $cost = $i * 50;
+}
 
-    // deletable
 ?>
 
 <!DOCTYPE html>
@@ -51,8 +57,6 @@ if(isset($_GET['id'])){
 
     <style>
 
-       
-    
 body {
     background: #F7F9F4;
     font-family: 'montserrat-light';
@@ -264,7 +268,6 @@ body {
     }
 }
 
-
     </style>
 
 </head>
@@ -307,35 +310,35 @@ body {
                 <div class="detail-item">
                     <span class="detail-label">Date In</span>
                     <span class="detail-value">
-                        <?php echo htmlspecialchars($slotdetails['date']); ?>
+                        <?php echo date('F j, Y', strtotime($slotdetails['date'])); ?>
                     </span>
                 </div>
 
                 <div class="detail-item">
                     <span class="detail-label">Date Out</span>
                     <span class="detail-value">
-                        <?php echo htmlspecialchars($slotdetails['date2']); ?>
+                        <?php echo date('F j, Y', strtotime($slotdetails['date2'])); ?>
                     </span>
                 </div>
 
                 <div class="detail-item">
                     <span class="detail-label">Time In</span>
                     <span class="detail-value">
-                        <?php echo htmlspecialchars($slotdetails['time_in']); ?>
+                        <?php echo date('g:i A', strtotime($slotdetails['time_in'])); ?>
                     </span>
                 </div>
 
                 <div class="detail-item">
                     <span class="detail-label">Time Out</span>
                     <span class="detail-value">
-                        <?php echo htmlspecialchars($slotdetails['time_out']); ?>
+                        <?php echo date('g:i A', strtotime($slotdetails['time_out'])); ?>
                     </span>
                 </div>
 
                 <div class="detail-item">
                     <span class="detail-label">Date Reserved</span>
                     <span class="detail-value">
-                        <?php echo htmlspecialchars($slotdetails['created_at']); ?>
+                        <?php echo date('F j, Y - g:i A', strtotime($slotdetails['created_at'])); ?>
                     </span>
                 </div>
 
@@ -386,13 +389,13 @@ body {
 
                 <p class="parking-label">YOUR PARKING CODE</p>
 
-                <div class="parking-code" style ="font-family: 'Poppins', sans-serif !important;">
+                <div class="parking-code" style="font-family: 'Poppins', sans-serif !important;">
                     <?php echo htmlspecialchars($slotdetails['code']); ?>
                 </div>
 
                 <p class="parking-label">YOUR PARKING SLOT</p>
 
-                <div class="parking-slot" style ="font-family: 'Poppins', sans-serif !important;">
+                <div class="parking-slot" style="font-family: 'Poppins', sans-serif !important;">
                     <?php echo htmlspecialchars($slotdetails['slot']); ?>
                 </div>
 
@@ -412,7 +415,7 @@ body {
                    name="id_to_delete"
                    value="<?php echo htmlspecialchars($slotdetails['id']); ?>">
 
-            <button type="submit" name="delete" class="delete-btn"  style ="font-family: 'montserrat-light' !important;">
+            <button type="submit" name="delete" class="delete-btn" style="font-family: 'montserrat-light' !important;">
                 Delete Reservation
             </button>
 
