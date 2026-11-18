@@ -80,9 +80,9 @@
     }
 
     #reginageorge table tr td:hover{
-        transform: scale(1.1);
+        transform: scale(1.07);
         transition: 0.3s all ease;
-        box-shadow: 0px 0px 10px 4px black;
+        box-shadow: 0px 0px 10px 4px grey;
     }
 
     #reginageorge table tr td a:hover{
@@ -93,6 +93,24 @@
     #reginageorge table td a:focus{
         outline: none;
     }
+
+    #fushi{
+        font-family: 'montserrat-light' !important;
+    }
+
+    #fushi span{
+        margin-right: 0.5em;
+    }
+
+    #gabiru {
+        color: green;
+    }
+    #capybara {
+        color: orange;
+    }
+    /* #mike {
+        color: red;
+    } */
 
 </style>
 
@@ -156,6 +174,14 @@
         <button id="butones" class="btn" type="submit" name="submit" value = "submit"><span>View reservation status</span>
         <i class="material-icons right icon-green">calendar_month</i>
         </button>
+    </div>
+
+    <div id="fushi" class="container center-align">
+        <h5>Legend</h5>
+        <br>
+        <h6><span id="gabiru">◼</span>Available</h6>
+        <h6><span id="capybara">◼</span>Has bookings</h6>
+        <!-- <h6><span id="mike">◼</span>Fully Booked</h6> -->
     </div>
     
 <div style = "margin-top: 2em">

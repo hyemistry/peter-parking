@@ -28,7 +28,19 @@ if(isset($_GET['id'])){
 
     mysqli_free_result($result);
 }
+    $cost = '';
+    // deletable
+    $date_in = $slotdetails['date'];
+    $date_out = $slotdetails['date2'];
+    $i = '';
+    do {
+        $date_in = date('Y-m-d', strtotime('+1 day', strtotime($date_in)));
+        $i++;
+    } while ($date_in <= $date_out);
 
+    $cost = $i*50;
+
+    // deletable
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +55,7 @@ if(isset($_GET['id'])){
     
 body {
     background: #F7F9F4;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'montserrat-light';
     color: #202820;
 }
 
@@ -217,6 +229,7 @@ body {
 
 .back-btn:hover {
     color: #FF8C00;
+    transition: 0.3s all ease;
 }
 
 /* Not Found */
@@ -358,6 +371,13 @@ body {
                     </span>
                 </div>
 
+                <div class="detail-item">
+                    <span class="detail-label">Reservation Cost:</span>
+                    <span class="detail-value">
+                        <?php echo 'PHP ' . $cost . '.00'; ?>
+                    </span>
+                </div>
+
             </div>
 
             <!-- RIGHT SIDE: PARKING CODE AND SLOT -->
@@ -366,13 +386,13 @@ body {
 
                 <p class="parking-label">YOUR PARKING CODE</p>
 
-                <div class="parking-code">
+                <div class="parking-code" style ="font-family: 'Poppins', sans-serif !important;">
                     <?php echo htmlspecialchars($slotdetails['code']); ?>
                 </div>
 
                 <p class="parking-label">YOUR PARKING SLOT</p>
 
-                <div class="parking-slot">
+                <div class="parking-slot" style ="font-family: 'Poppins', sans-serif !important;">
                     <?php echo htmlspecialchars($slotdetails['slot']); ?>
                 </div>
 
@@ -392,7 +412,7 @@ body {
                    name="id_to_delete"
                    value="<?php echo htmlspecialchars($slotdetails['id']); ?>">
 
-            <button type="submit" name="delete" class="delete-btn">
+            <button type="submit" name="delete" class="delete-btn"  style ="font-family: 'montserrat-light' !important;">
                 Delete Reservation
             </button>
 

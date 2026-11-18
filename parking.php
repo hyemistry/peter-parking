@@ -14,6 +14,21 @@ include('config/db_connect.php');
          if(!preg_match('/^[a-zA-Z0-9_]{3,16}$/', $username)){
             $errors['username'] = 'Username must be alphanumeric and underscores only.';
          }
+         $sql2 = "SELECT * FROM user_info";
+
+         $result2 = mysqli_query($conn, $sql2);
+
+         $user_infos2 = mysqli_fetch_all($result2, MYSQLI_ASSOC);
+
+         mysqli_free_result($result2);
+
+         foreach($user_infos2 as $usersname){
+            if($usersname['username'] == $username){
+               $errors['username'] = 'Username is already taken.';
+            }
+         }
+
+         
       }
 
       if(empty($_POST['password'])){
@@ -60,9 +75,11 @@ include('config/db_connect.php');
          $slot = $_POST['slot'];
       }
 
-      if ($_POST['time_in'] >= $_POST['time_out']){
+      if($_POST['date'] == $_POST['date2']){
+         if ($_POST['time_in'] >= $_POST['time_out']){
          $errors['time_in'] = 'Time-in cannot be more or the same as time-out';
          $errors['time_out'] = 'Time-out cannot be more or the same as time-in';
+         }
       }
 
       if(empty($_POST['time_in'])){
@@ -148,7 +165,7 @@ include('config/db_connect.php');
       if(array_filter($errors)){
         
       }else{
-
+            
             $username = mysqli_real_escape_string($conn, $_POST['username']);
             $password = mysqli_real_escape_string($conn, $_POST['password']);
             $time_in = mysqli_real_escape_string($conn, $_POST['time_in']);
