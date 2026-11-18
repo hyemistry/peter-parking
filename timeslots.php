@@ -160,17 +160,42 @@ mysqli_close($conn);
                 font-size: 12px;
             }
         }
+
+        #souei a{
+            background-color: #268ad6;
+            width: 20em;
+            height: 2.7em;
+            border-radius: 2em;
+            align-items: center;
+        }
+
+        #souei a:hover{
+            transform: scale(1.1);
+            transition: 0.3s all ease;
+            box-shadow: 0px 0px 5px 2px #edae49;
+        }
+
+        #souei a i{
+            color: white;
+        }
+
+        #diablo{
+            margin-bottom: 2.5em;
+        }
+
+
     </style>
 </head>
 
 <body>
 
-<?php include('templates/alt_header.php'); ?>
+<?php include('templates/alt_header2.php'); ?>
+
 <br>
 <br>
 <br>
 <br>
-<div class="container reservation-container">
+<div class="container reservation-container" id="diablo">
 
     <div class="card reservation-card">
 
@@ -242,11 +267,10 @@ mysqli_close($conn);
 
             <?php } ?>
 
-            <div class="center">
-                <a href="openslots.php"
-                   class="btn back-button">
+            <div class="center" id="souei">
+                <a href="openslots.php" class="btn back-button">
                     <i class="material-icons left">arrow_back</i>
-                    Back to Index
+                    Back to Reservations
                 </a>
             </div>
 

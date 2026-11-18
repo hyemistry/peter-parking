@@ -37,6 +37,64 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="materialize/css/materialize.min.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+    #butones{
+        background-color: #268ad6;
+        border-radius: 5em;
+        text-align: center;
+        width: 25em;
+        height: 4em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    #butones:focus{
+      border:none;
+      outline: none;
+    }
+
+    #butones a{
+        text-decoration: none;
+    }
+
+    #butones span{
+        font-family: 'montserrat-light';
+        font-size: 1.3em;
+        color: white;
+    }
+
+    #butones:hover{
+        box-shadow: 0px 0px 10px 3px #ea8130;
+        font-weight: bold;
+        transition: 0.5s all ease;
+    }
+
+    #reginageorge table td a{
+        text-decoration: none;
+    }
+
+    #reginageorge table tr td:hover{
+        transform: scale(1.1);
+        transition: 0.3s all ease;
+        box-shadow: 0px 0px 10px 4px black;
+    }
+
+    #reginageorge table tr td a:hover{
+        font-size: 3em;
+        transition: 0.3s all ease;
+    }
+
+    #reginageorge table td a:focus{
+        outline: none;
+    }
+
+</style>
 
 <?php include('templates/alt_header.php'); ?>
 
@@ -71,7 +129,7 @@
     </section>
 
     <div class="container center" style = "margin-top: 2em; margin-bottom: 1em;">
-    <h4 style = "font-family: montserrat-light">Active Reservations:</h4>
+    <h4 style = "font-family: montserrat-light">Active Reservations</h4>
     </div>
 
 
@@ -102,7 +160,7 @@
     
 <div style = "margin-top: 2em">
         
-<div class="row">
+<div class="row" id="reginageorge">
 
     <div class="col s6">
         <div class="container">

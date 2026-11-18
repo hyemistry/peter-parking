@@ -108,15 +108,16 @@
             margin-left: 2em;
         }
 
-        #logo:focus{
-            border: none:
-            outline: none;
-        }
-
-        nav ul li a:focus{
+        nav a:focus{
             border: none;
             outline: none;
         }
+
+        nav button a:focus{
+            border: none;
+            outline: none;
+        }
+
         .brand-text{
             color: #000000 !important;
         }
@@ -128,7 +129,7 @@
 <header>
     <nav class="white">
         <div class="container">
-            <a id="logo" href="index.php"><img id="logo" src="stuff/photos/logo.png" alt="ParkUp" style="margin-top: 0.7em;"></a>
+            <a id="logo" href="index.php"><img src="stuff/photos/logo.png" alt="ParkUp" style="margin-top: 0.7em;"/></a>
 
                 <a href="#" class="sidenav-trigger" data-target="mobile-links">
                     <i class="material-icons">menu</i>
