@@ -108,12 +108,16 @@
             margin-left: 2em;
         }
 
-
-
         nav a:focus{
             border: none;
             outline: none;
         }
+
+        nav button a:focus{
+            border: none;
+            outline: none;
+        }
+
         .brand-text{
             color: #000000 !important;
         }

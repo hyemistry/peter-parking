@@ -66,7 +66,7 @@
         #logo:focus{
             border: none;
             outline: none;
-        }
+}
 
     </style>
 </head>
@@ -85,7 +85,7 @@
                     <li><a href="about.php">About</a></li>
                     <li><a href="contactus.php">Contact Us</a></li>
                     <button id="hotdog" class="btn" style="
-                    background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
+                    background-color: #268ad6; border-radius: 1em; margin-left: 1em;" >
                         <li><a href="parking.php" style="color: white; font-family: 'montserrat-light';">Park Now!</a></li>
                     </button>
                     <button id="hotdog" class="btn" style="
