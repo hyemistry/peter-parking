@@ -14,6 +14,21 @@ include('config/db_connect.php');
          if(!preg_match('/^[a-zA-Z0-9_]{3,16}$/', $username)){
             $errors['username'] = 'Username must be alphanumeric and underscores only.';
          }
+         $sql2 = "SELECT * FROM user_info";
+
+         $result2 = mysqli_query($conn, $sql2);
+
+         $user_infos2 = mysqli_fetch_all($result2, MYSQLI_ASSOC);
+
+         mysqli_free_result($result2);
+
+         foreach($user_infos2 as $usersname){
+            if($usersname['username'] == $username){
+               $errors['username'] = 'Username is already taken.';
+            }
+         }
+
+         
       }
 
       if(empty($_POST['password'])){
