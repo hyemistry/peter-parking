@@ -111,7 +111,7 @@
     <div id="benimaru" class="container">
         <div class="row">
             <div class="col s4" id="col1">
-                <h6><span>Swift Compliance/span></h6>
+                <h6><span>Swift Compliance</span></h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem esse autem non aspernatur voluptates possimus tempora quo similique quam! Vel aliquam reprehenderit ducimus mollitia ab quia non quam corporis officia!</p>
             </div>
 
