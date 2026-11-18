@@ -75,9 +75,11 @@ include('config/db_connect.php');
          $slot = $_POST['slot'];
       }
 
-      if ($_POST['time_in'] >= $_POST['time_out']){
+      if($_POST['date'] == $_POST['date2']){
+         if ($_POST['time_in'] >= $_POST['time_out']){
          $errors['time_in'] = 'Time-in cannot be more or the same as time-out';
          $errors['time_out'] = 'Time-out cannot be more or the same as time-in';
+         }
       }
 
       if(empty($_POST['time_in'])){
@@ -163,7 +165,7 @@ include('config/db_connect.php');
       if(array_filter($errors)){
         
       }else{
-
+            
             $username = mysqli_real_escape_string($conn, $_POST['username']);
             $password = mysqli_real_escape_string($conn, $_POST['password']);
             $time_in = mysqli_real_escape_string($conn, $_POST['time_in']);
