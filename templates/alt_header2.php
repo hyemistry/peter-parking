@@ -38,11 +38,11 @@
         }
 
         #nav-mobile li a:hover{
-            color: #f6ec5f;
+            color: #aba43d;
             text-decoration: none;
             font-weight: bold;
-            transition: 0.5s all ease;
-            text-shadow: 0 0 5px 3px black;
+            text-shadow: 1px 2px 3px #a4a4a4;
+            transition: 0.3s all ease;
         }
 
         .material-icons{

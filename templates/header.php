@@ -21,15 +21,12 @@
             margin-bottom: 0.5em;
         }
 
-        nav a img:focus:not(:focus-visible){
-            outline-color: transparent;
-        }
-
         nav{
             position: fixed;
             top: 0;
             z-index: 9999;
         }
+
 
         #nav-mobile li a{
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -40,8 +37,8 @@
             color: #aba43d;
             text-decoration: none;
             font-weight: bold;
-            text-shadow: 0px 0px 5px 3px black;
-            transition: 0.5s all ease;
+            text-shadow: 1px 2px 3px #a4a4a4;
+            transition: 0.3s all ease;
         }
 
         .material-icons{
@@ -66,11 +63,14 @@
         #logo:focus{
             border: none;
             outline: none;
-}
+        }
+
 
     </style>
 </head>
 <body>
+
+<!-- style="backdrop-filter: blur(100px);" -->
 
 <header>
     <nav class="white">
@@ -84,7 +84,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="about.php">About</a></li>
                     <li><a href="contactus.php">Contact Us</a></li>
-                    <button id="hotdog" class="btn" style="
+                    <!-- <button id="hotdog" class="btn" style="
                     background-color: #268ad6; border-radius: 1em; margin-left: 1em;" >
                         <li><a href="parking.php" style="color: white; font-family: 'montserrat-light';">Park Now!</a></li>
                     </button>
@@ -96,7 +96,7 @@
                     background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
                         <li><a href="openslots.php" style="color: white; font-family: 'montserrat-light';">Slots</a></li>
                     </button>
-                </ul>
+                </ul> -->
             </div>
             
         <ul class="sidenav" id="mobile-links">

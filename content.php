@@ -8,7 +8,7 @@
 
 <style>
     body{
-        background-image: linear-gradient(to bottom, #906767, white, #99c4da);
+        background-image: linear-gradient(to bottom, #906767, white, #424f56);
     }
 
     body span::selection{
@@ -31,7 +31,7 @@
         border-radius: 5em;
         text-align: center;
         width: 13em;
-        height: 4em;
+        height: 3.5em;
     }
 
     #benjamin a{
@@ -51,18 +51,29 @@
         transition: 0.5s all ease;
     }
 
+    #benjamin a:focus{
+        outline: none;
+    }
+
     #benimaru h6{
         font-weight: bolder;
+        color: black;
     }
 
     #benimaru p{
-        font-size: 2vh;
+        font-size: 2.5vh;
+        color: black;
+    }
+
+    #benimaru h6{
+        margin-top: 0.5em;
+        font-size: 3vh;
     }
 
     #benimaru #col1{
         position: relative;
         border-right: 1px solid #268ad6;
-        height: 25vh;
+        height: 23vh;
     }
 
     .parallax-container {
@@ -89,17 +100,33 @@
 
     #shuna{
         margin-top: 3em;
-        margin-bottom: 3em;
+        /* margin-bottom: 3em; */
         font-family: 'montserrat-light';
         font-size: 1em !important;
+        background-position: center;
+        background-image: url('stuff/photos/parkingaest3.jpg');
+        background-size: cover;
+        backdrop-filter: blur(5px);
+        background-attachment: fixed;
+    }
+
+    #shuna::before{
+        content: "";
+        position: absolute;
+        inset: -5px;
+        background-image: url('stuff/photos/parkingaest3.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(5px);
+        z-index: -100;
     }
 
     #shuna #fahh{
         border-radius: 1em;
         background-color: white;
         box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
-}
-
+    }
 
 </style>
 
@@ -112,17 +139,17 @@
         <div class="row">
             <div class="col s4" id="col1">
                 <h6><span>Swift Compliance</span></h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem esse autem non aspernatur voluptates possimus tempora quo similique quam! Vel aliquam reprehenderit ducimus mollitia ab quia non quam corporis officia!</p>
+                <p>Spot reservations are done in a swift manner, providing easy assistance to customers.<p>
             </div>
 
             <div class="col s4" id="col1">
                 <h6><span>Open 24/7</span></h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam voluptatibus eum ipsum ipsa ut minus fuga est hic, doloribus dolorem quaerat aperiam vitae quae autem nihil sequi eius? Provident, consectetur.</p>
+                <p>The parking spots are open 24 hours a day, 7 days a week, so long as the spots are not fully booked.</p>
             </div>
 
             <div class="col s4">
-                <h6><span>Near R&H Park</span></h6>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat atque saepe, ad expedita error nulla nemo ipsa quos beatae incidunt eaque rerum suscipit consequuntur, eum porro nisi doloremque fugiat est?</p>
+                <h6><span>Cityscape Center</span></h6>
+                <p>The parking lot is located in a rather convenient position, leaving the customers agape with a variety of places to enjoy.</p>
             </div>
 
         </div>
@@ -135,15 +162,15 @@
     </button>
 </div>
 
-<div class="parallax-container">
+<!-- <div class="parallax-container">
     <div class="parallax">
         <img src="stuff/photos/parkingaest3.jpg" alt="" class="responsive-img">
     </div>
-</div>
+</div> -->
 
 <section id="shuna">
     <div class="container center-align" style="margin-bottom: 3em;">
-        <h4>Reviews</h4>
+        <h4 class="white-text" style="margin-top: 1.2em;">Reviews</h4>
     </div>
 
     <div class="container">
@@ -159,11 +186,10 @@
                 <p>10/10! Mabait yung staff sa amin ni Gwen lalo na yung Hanna ang pangalan</p>
             </div>
             
-            <div class="col s4 offset-l7" id="fahh" style="margin-top: 2em;">
+            <div class="col s4 offset-l7" id="fahh" style="margin-top: 2em; margin-bottom: 2em;">
                 <h6><span>Rimuru Tempest</span></h6>
                 <p>Ganda nung parking lot location! Wala kaming ganito sa Tempest eh. Kung pwede ko lang sana 'to pag-investan...</p>
             </div>
-
         </div>
     </div>
 </section>

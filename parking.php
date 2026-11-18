@@ -203,6 +203,7 @@ include('config/db_connect.php');
 <?php include('templates/alt_header.php'); ?>
 
 <style>
+
    input{
       caret-color: #268ad6;
       border: none;
@@ -217,8 +218,8 @@ include('config/db_connect.php');
         background-color: #268ad6;
         border-radius: 5em;
         text-align: center;
-        width: 11em;
-        height: 4em;
+        width: 12em;
+        height: 3.5em;
         margin-top: 2em;
     }
 
@@ -288,7 +289,7 @@ include('config/db_connect.php');
 </div>
 
 <section class="container" style = "margin-top: 3em">
-   <form action="parking.php" class="white" method = "POST">
+   <form action="parking.php"  method = "POST">
    
       <div class="row">
          <div class="col s6 input-field">
@@ -507,7 +508,7 @@ include('config/db_connect.php');
    </div>
 
       <div class="center" style = "margin-top: 2em">
-         <button id="butones" class="btn" type="submit" name="submit" value = "submit"><span>Submit</span>
+         <button id="butones" class="btn" type="submit" name="submit" value = "submit"><span>Reserve</span>
             <i class="material-icons right icon-green">send</i>
          </button>
       </div>

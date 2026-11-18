@@ -33,7 +33,7 @@
     }
 
     #ah{
-        margin-bottom: 2em;
+        margin-bottom: 3em;
     }
 
     span{
@@ -69,7 +69,6 @@
         <h6>Number: +63 967 420 6967<br><br>Email: parkupinc@gmail.com</h6>
     </div>
 </div>
-
 
 <?php include('templates/footer.php'); ?>
 

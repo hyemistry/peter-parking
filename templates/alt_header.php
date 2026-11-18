@@ -38,11 +38,11 @@
         }
 
         #nav-mobile li a:hover{
-            color: #f6ec5f;
+            color: #aba43d;
             text-decoration: none;
             font-weight: bold;
-            transition: 0.5s all ease;
-            text-shadow: 0 0 5px 3px black;
+            text-shadow: 1px 2px 3px #a4a4a4;
+            transition: 0.3s all ease;
         }
 
         .material-icons{
@@ -136,17 +136,19 @@
                 </a>
 
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="contactus.php">Contact Us</a></li>
-                    <button id="hotdog" class="btn" style="
-                    background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
-                        <li><a href="reservation.php" style="color: white; font-family: 'montserrat-light';">Your Reservation</a></li>
-                    </button>
-                    <button id="hotdog" class="btn" style="
-                    background-color: #268ad6; border-radius: 1em; margin-left: 1em;">
-                        <li><a href="openslots.php" style="color: white; font-family: 'montserrat-light';">Slots</a></li>
-                    </button>
+                    <!-- <li><a href="about.php">About</a></li>
+                    <li><a href="contactus.php">Contact Us</a></li> -->
+                    <li><a href="reservation.php">Your Reservation</a></li>
+                    <li><a href="openslots.php">Slots</a></li>
+                    <!-- <button id="hotdog" class="btn" style="
+                    background-color: #268ad6; border-radius: 1em; margin-left: 1em;"> -->
+                    <!-- </button> -->
+                    <!-- <button id="hotdog" class="btn" style="
+                    background-color: #268ad6; border-radius: 1em; margin-left: 1em;"> -->
+                    <!-- </button> -->
                 </ul>
+
+                 <!-- style="color: white; font-family: 'montserrat-light'; STYLE NG BUTTON -->
             </div>
             
         <ul class="sidenav" id="mobile-links">

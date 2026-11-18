@@ -92,7 +92,7 @@
     <h4 class="center-align" style="margin-bottom: 1em;">About ParkUp</h4>
     
     <div class="container">
-        <p><span>ParkUp</span> is an online vehicle parking service dedicated to the park near R&H Inc., bringing a peaceful parking system to maintain organization and lessen the clutter of illegally parked vehicles.</p><br>
+        <p><span>ParkUp</span> is an online vehicle parking service at the heart of the Antipolo cityscape, bringing a peaceful parking system to maintain organization and lessen the clutter of illegally parked vehicles.</p><br>
         <p>To maintain the website's online status, users may donate to our cause <a href="#"><span>here</span></a>. Your donation will be greatly appreciated. Thank you!</p>
     </div>
 </section>

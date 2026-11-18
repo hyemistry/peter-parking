@@ -177,8 +177,6 @@
     </div>
 
     <div id="fushi" class="container center-align">
-        <h5>Legend</h5>
-        <br>
         <h6><span id="gabiru">◼</span>Available</h6>
         <h6><span id="capybara">◼</span>Has bookings</h6>
         <!-- <h6><span id="mike">◼</span>Fully Booked</h6> -->
