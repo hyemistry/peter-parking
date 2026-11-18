@@ -26,6 +26,15 @@ $everything = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 mysqli_stmt_close($stmt);
 mysqli_close($conn);
+
+function formatDate($date) {
+    return date("F j, Y", strtotime($date));
+}
+
+function formatTime($time) {
+    return date("g:i A", strtotime($time));
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -235,33 +244,33 @@ mysqli_close($conn);
 
                     <tbody>
 
-                        <?php foreach ($everything as $everythings) { ?>
+    <?php foreach ($everything as $everythings) { ?>
 
-                            <tr>
-                                <td>
-                                    <?php echo htmlspecialchars($everythings['date']); ?>
-                                </td>
+        <tr>
+            <td>
+                <?php echo htmlspecialchars(formatDate($everythings['date'])); ?>
+            </td>
 
-                                <td>
-                                    <?php echo htmlspecialchars($everythings['date2']); ?>
-                                </td>
+            <td>
+                <?php echo htmlspecialchars(formatDate($everythings['date2'])); ?>
+            </td>
 
-                                <td>
-                                    <span class="time-badge">
-                                        <?php echo htmlspecialchars($everythings['time_in']); ?>
-                                    </span>
-                                </td>
+            <td>
+                <span class="time-badge">
+                    <?php echo htmlspecialchars(formatTime($everythings['time_in'])); ?>
+                </span>
+            </td>
 
-                                <td>
-                                    <span class="time-badge">
-                                        <?php echo htmlspecialchars($everythings['time_out']); ?>
-                                    </span>
-                                </td>
-                            </tr>
+            <td>
+                <span class="time-badge">
+                    <?php echo htmlspecialchars(formatTime($everythings['time_out'])); ?>
+                </span>
+            </td>
+        </tr>
 
-                        <?php } ?>
+    <?php } ?>
 
-                    </tbody>
+</tbody>
 
                 </table>
 
