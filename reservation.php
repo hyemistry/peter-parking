@@ -151,10 +151,21 @@ if(isset($_POST['submit'])){
                 <div class="red-text"><?php echo $errors['username']; ?></div>
             </div>
             <div class="col s6 input-field">
-                <i class="material-icons prefix icon_orange">lock</i>
-                <input type="text" name = "password" value = <?php echo $password?>>
-                <label>Password:</label>
-                <div class="red-text"><?php echo $errors['password']; ?></div>
+                     <i class="material-icons prefix icon_orange">lock</i>
+
+    <input type="password" name="password" id="password">
+
+    <label for="password">Password:</label>
+
+    <i class="material-icons icon_orange"
+       id="togglePassword"
+       style="position: absolute; right: 15px; top: 10px; cursor: pointer;">
+        visibility
+    </i>
+
+    <div class="red-text">
+        <?php echo $errors['password']; ?>
+    </div>
             </div>
         </div> 
 
@@ -191,6 +202,18 @@ if(isset($_POST['submit'])){
         </div>
     </div>
 </div> -->
-    
+    <script>
+        $('#togglePassword').click(function() {
+    var password = $('#password');
+
+    if (password.attr('type') === 'password') {
+        password.attr('type', 'text');
+        $(this).text('visibility_off');
+    } else {
+        password.attr('type', 'password');
+        $(this).text('visibility');
+    }
+});
+    </script>
 
 <html>
