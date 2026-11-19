@@ -12,8 +12,8 @@ if(isset($_POST['submit'])){
         $errors['username'] = 'A username is required <br/>';
       } else {
         $username = $_POST['username'];
-        if(!preg_match('/^[a-zA-Z0-9_]{3,16}$/', $username)){
-            $errors['username'] = 'Username must be alphanumeric and underscores only.';
+        if(!preg_match('/^[a-zA-Z ]+$/', $username)){
+            $errors['username'] = 'Username must be alphabets only.';
         }
       }
 
@@ -147,7 +147,7 @@ if(isset($_POST['submit'])){
             <div class="col s6 input-field">
                 <i class="material-icons prefix icon_orange">account_circle</i>
                 <input type="text" name = "username" value = <?php echo $username?>>
-                <label>Username:</label>
+                <label>Full Name:</label>
                 <div class="red-text"><?php echo $errors['username']; ?></div>
             </div>
             <div class="col s6 input-field">
